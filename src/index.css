@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #2c3e50;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.language-toggle {
+  display: flex;
+  gap: 15px;
+  margin-bottom: -10px;
+}
+
+.language-toggle button {
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.language-toggle button:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.language-toggle button.active {
+  background: white;
+  border-color: #6c5ce7;
+  color: #6c5ce7;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
+}
+
+/* Glassmorphism magyarázó szekció */
+.info-section {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 30px 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 16px 40px rgba(31, 38, 135, 0.1);
+    color: #2c3e50;
+    text-align: left;
+}
+
+.info-section h1 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: #1a252f;
+    border-bottom: 2px solid rgba(44, 62, 80, 0.15);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.info-section li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.calculator-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.calculator-card:hover {
+    transform: translateY(-6px);
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 20px;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #34495e;
+    padding: 14px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.checkbox-group:hover {
+    background-color: #e9ecef;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 15px;
+    transform: scale(1.4);
+    cursor: pointer;
+    accent-color: #6c5ce7;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e0e6ed;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+input[type="number"]::placeholder {
+    color: #b2bec3;
+}
+
+input[type="number"]:focus {
+    border-color: #6c5ce7;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.15);
+}
+
+.section-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #a4b0be;
+    margin: 30px 0 12px 0;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.results-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    border-left: 5px solid #bdc3c7;
+}
+
+.deductions-box {
+    background-color: #ffeaa7;
+    background: linear-gradient(135deg, #fff0f3 0%, #ffdde1 100%);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    border-left: 5px solid #ff7675;
+}
+
+.net-box {
+    background-color: #f0fdf4;
+    background: linear-gradient(135deg, #e8fbe8 0%, #c1f0c1 100%);
+    padding: 24px;
+    border-radius: 14px;
+    border: 2px solid #2ecc71;
+    box-shadow: 0 8px 25px rgba(46, 204, 113, 0.2);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+.result-item.total {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 20px;
+    border-top: 2px dashed rgba(0, 0, 0, 0.15);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.text-red {
+    color: #d63031;
+}
+
+.text-green {
+    color: #1e8449;
+    font-weight: 800;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.25s;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    #root {
+        padding: 40px 15px;
+    }
+    
+    .app-container {
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+    
+    .info-section {
+        padding: 25px 20px;
+    }
+    
+    .info-section h1 {
+        font-size: 20px;
+    }
+
+    .info-section p, .info-section li {
+        font-size: 14px;
+    }
+    
+    .calculator-card {
+        padding: 30px 20px;
+    }
+    
+    .result-item {
+        font-size: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .result-item span:last-child {
+        margin-top: 6px;
+        align-self: flex-end;
+    }
+    
+    .result-item.total {
+        font-size: 18px;
+    }
+    
+    .checkbox-group {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
