@@ -351,6 +351,37 @@ input[type="number"]:focus {
   animation-delay: 0.25s;
 }
 
+.delay-3 {
+  animation-delay: 0.4s;
+}
+
+/* Footer Styles */
+.app-footer {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.app-footer p {
+    font-size: 14px;
+    color: #4b6584;
+    font-weight: 500;
+}
+
+.app-footer a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid rgba(108, 92, 231, 0.2);
+}
+
+.app-footer a:hover {
+    color: #4834d4;
+    border-color: #4834d4;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 480px) {
     #root {

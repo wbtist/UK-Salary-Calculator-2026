@@ -319,6 +319,12 @@ function App() {
           </div>
         </div>
       </div>
+
+      <footer className="app-footer animate-fade-in-up delay-3">
+        <p>
+          &copy; {new Date().getFullYear()} by <a href="https://wbtist.github.io/" target="_blank" rel="noopener noreferrer">Istvan Toth</a>
+        </p>
+      </footer>
     </div>
   );
 }
