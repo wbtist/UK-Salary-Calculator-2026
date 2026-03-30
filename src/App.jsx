@@ -32,7 +32,9 @@ const dictionary = {
     pensionOutput: "Pension:",
     slOutput: "Student Loan:",
     totalDeductions: "Total Deductions:",
-    taxInfo: "Calculations are based on standard 1257L tax code for the 2026/27 financial year. Personal circumstances may vary."
+    taxInfo: "Calculations are based on standard 1257L tax code for the 2026/27 financial year. Personal circumstances may vary.",
+    affiliateText: "Manage your salary safely. Here is how:",
+    affiliateLink: "Safe Money Handling"
   },
   HUN: {
     title1: "Az Egyesült Királyságbeli fizetésed megértése",
@@ -64,7 +66,9 @@ const dictionary = {
     pensionOutput: "Nyugdíj:",
     slOutput: "Diákhitel:",
     totalDeductions: "Összes levonás:",
-    taxInfo: "A számítások a 2026/27-es pénzügyi év standard 1257L adókódján alapulnak. Az egyéni körülmények eltérőek lehetnek."
+    taxInfo: "A számítások a 2026/27-es pénzügyi év standard 1257L adókódján alapulnak. Az egyéni körülmények eltérőek lehetnek.",
+    affiliateText: "Kezeld biztonságosan a fizetésed. Így csináld:",
+    affiliateLink: "Biztonságos Pénzkezelés"
   }
 };
 
@@ -157,8 +161,8 @@ function App() {
   return (
     <div className="app-container">
       <div className="language-toggle animate-fade-in-up delay-1">
-        <button className={lang === 'UK' ? 'active' : ''} onClick={() => setLang('UK')}>🇬🇧 UK</button>
-        <button className={lang === 'HUN' ? 'active' : ''} onClick={() => setLang('HUN')}>🇭🇺 HUN</button>
+        <button className={lang === 'UK' ? 'active' : ''} onClick={() => setLang('UK')}>UK</button>
+        <button className={lang === 'HUN' ? 'active' : ''} onClick={() => setLang('HUN')}>HUN</button>
       </div>
 
       <div className="info-section animate-fade-in-up delay-1">
@@ -173,6 +177,17 @@ function App() {
           <li><strong>{t.paTitle}</strong> {t.paDesc}</li>
           <li><strong>{t.rtTitle}</strong> {t.rtDesc}</li>
         </ul>
+      </div>
+
+      <div className="affiliates-section animate-fade-in-up delay-1">
+        <div className="affiliate-banner">
+          <p>
+            {t.affiliateText}{' '}
+            <a href="https://wbtist.github.io/Safe-Money-Handling/" target="_blank" rel="noopener noreferrer">
+              {t.affiliateLink}
+            </a>
+          </p>
+        </div>
       </div>
 
       <div className="calculator-card animate-fade-in-up delay-2">

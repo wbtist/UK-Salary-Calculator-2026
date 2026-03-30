@@ -105,6 +105,47 @@ body {
     color: #34495e;
 }
 
+.affiliates-section {
+    width: 100%;
+    max-width: 550px;
+}
+
+.affiliate-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+}
+
+.affiliate-icon {
+    font-size: 20px;
+}
+
+.affiliate-banner p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.affiliate-banner a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(108, 92, 231, 0.2);
+    transition: all 0.2s ease;
+}
+
+.affiliate-banner a:hover {
+    color: #4834d4;
+    border-color: #4834d4;
+}
+
 .calculator-card {
     background: white;
     padding: 40px;
