@@ -32,9 +32,7 @@ const dictionary = {
     pensionOutput: "Pension:",
     slOutput: "Student Loan:",
     totalDeductions: "Total Deductions:",
-    taxInfo: "Calculations are based on standard 1257L tax code for the 2026/27 financial year. Personal circumstances may vary.",
-    affiliateText: "Manage your salary safely. Here is how:",
-    affiliateLink: "Safe Money Handling"
+    taxInfo: "Calculations are based on standard 1257L tax code for the 2026/27 financial year. Personal circumstances may vary."
   },
   HUN: {
     title1: "Az Egyesült Királyságbeli fizetésed megértése",
@@ -179,16 +177,18 @@ function App() {
         </ul>
       </div>
 
-      <div className="affiliates-section animate-fade-in-up delay-1">
-        <div className="affiliate-banner">
-          <p>
-            {t.affiliateText}{' '}
-            <a href="https://wbtist.github.io/Safe-Money-Handling/" target="_blank" rel="noopener noreferrer">
-              {t.affiliateLink}
-            </a>
-          </p>
+      {lang === 'HUN' && (
+        <div className="affiliates-section animate-fade-in-up delay-1">
+          <div className="affiliate-banner">
+            <p>
+              {t.affiliateText}{' '}
+              <a href="https://wbtist.github.io/Safe-Money-Handling/" target="_blank" rel="noopener noreferrer">
+                {t.affiliateLink}
+              </a>
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="calculator-card animate-fade-in-up delay-2">
         <div className="tax-alert">
