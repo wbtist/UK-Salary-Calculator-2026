@@ -119,6 +119,41 @@ body {
     transform: translateY(-6px);
 }
 
+.tax-alert {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #eef4cb; /* Light lime/olive */
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    color: #334d00; /* Darker olive */
+    box-shadow: 0 4px 12px rgba(51, 77, 0, 0.08);
+}
+
+.tax-alert-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: #dce775; /* Slightly darker lime */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tax-alert-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: #334d00;
+}
+
+.tax-alert-text {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
 h2 {
     text-align: center;
     color: #2c3e50;

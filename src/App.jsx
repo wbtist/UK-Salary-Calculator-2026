@@ -31,7 +31,8 @@ const dictionary = {
     nationalInsurance: "National Insurance:",
     pensionOutput: "Pension:",
     slOutput: "Student Loan:",
-    totalDeductions: "Total Deductions:"
+    totalDeductions: "Total Deductions:",
+    taxInfo: "Calculations are based on standard 1257L tax code for the 2026/27 financial year. Personal circumstances may vary."
   },
   HUN: {
     title1: "Az Egyesült Királyságbeli fizetésed megértése",
@@ -62,7 +63,8 @@ const dictionary = {
     nationalInsurance: "Társadalombiztosítás (NI):",
     pensionOutput: "Nyugdíj:",
     slOutput: "Diákhitel:",
-    totalDeductions: "Összes levonás:"
+    totalDeductions: "Összes levonás:",
+    taxInfo: "A számítások a 2026/27-es pénzügyi év standard 1257L adókódján alapulnak. Az egyéni körülmények eltérőek lehetnek."
   }
 };
 
@@ -174,6 +176,17 @@ function App() {
       </div>
 
       <div className="calculator-card animate-fade-in-up delay-2">
+        <div className="tax-alert">
+          <div className="tax-alert-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <div className="tax-alert-text">
+            {t.taxInfo}
+          </div>
+        </div>
+        
         <h2>{t.calcTitle}</h2>
         
         <div className="input-group">
